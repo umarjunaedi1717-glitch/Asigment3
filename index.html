@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Product Management</h1>
+
+    <div class="container">
+
+        <div class="form-section">
+            <h2>Product Information</h2>
+
+
+            <form id="productForm" novalidate>
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" required>
+                <small id="productNameError"></small>
+
+                <label for="stockStatus">Stock Status</label>
+                <select id="stockStatus" required>
+                    <option value="">Choose Status</option>
+                    <option value="In Stock">In Stock</option>
+                    <option value="Out of Stock">Out of Stock</option>
+                </select>
+                <small id="stockStatusError"></small>
+
+
+                <label for="price">Price</label>
+                <input type="number" id="price" required>
+                <small id="priceError"></small>
+
+
+                <label for="description">Description</label>
+                <textarea id="description" required></textarea>
+                <small id="descriptionError"></small>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" required>
+                <small id="quantityError"></small>
+
+                <label for="color">Color</label>
+                <input type="text" id="color" required>
+                <small id="colorError"></small>
+
+                <label for="material">Material</label>
+                <input type="text" id="material" required>
+                <small id="materialError"></small>
+
+
+                <label for="brand">Brand</label>
+                <input type="text" id="brand" required>
+                <small id="brandError"></small>
+
+                <button type="submit">Save Product</button>
+
+            </form>
+        </div>
+
+        <div class="product-section">
+            <h2>Product Details</h2>
+            <button id="fetchButton">Load API Data</button>
+            <div id="apiData"></div>
+
+            <div id="productList">
+                <!-- Product akan ditampilkan di sini -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
